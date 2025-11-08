@@ -1,6 +1,6 @@
 {
   "name": "dynamic-wireframe-prototyper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A web-based tool for designing and prototyping wireframes collaboratively.",
   "main": "index.js",
   "scripts": {
