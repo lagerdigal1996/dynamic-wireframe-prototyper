@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-wireframe-prototyper",
+  "version": "1.0.0",
+  "description": "A web-based tool for designing and prototyping wireframes collaboratively.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently 'npm run server' 'npm run client'",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "concurrently": "^5.3.0"
+  }
+}
