@@ -13,11 +13,11 @@ app.use(express.json());
 let activeConnections = new Set();
 
 io.on('connection', (socket) => {
-    console.log('New client connected');
+    console.log(`New client connected: ${socket.id}`);
     activeConnections.add(socket);
 
     socket.on('disconnect', () => {
-        console.log('Client disconnected');
+        console.log(`Client disconnected: ${socket.id}`);
         activeConnections.delete(socket);
     });
 
