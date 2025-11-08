@@ -10,15 +10,11 @@ const io = socketIo(server);
 app.use(cors());
 app.use(express.json());
 
-let activeConnections = new Set();
-
 io.on('connection', (socket) => {
     console.log(`New client connected: ${socket.id}`);
-    activeConnections.add(socket);
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${socket.id}`);
-        activeConnections.delete(socket);
     });
 
     socket.on('update_wireframe', (data) => {
